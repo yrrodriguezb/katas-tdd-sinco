@@ -25,7 +25,7 @@ namespace FizzBuzz.Tests
             var result = FizzBuzzGenerator.Generate(2);
             
             // Assert
-            result.Should().HaveCount(1);
+            result.Should().HaveCount(2);
             result[0].Should().Be("1");
             result[1].Should().Be("2");
         }
