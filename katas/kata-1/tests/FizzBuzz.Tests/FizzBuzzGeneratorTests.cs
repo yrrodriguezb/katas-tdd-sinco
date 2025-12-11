@@ -54,5 +54,20 @@ namespace FizzBuzz.Tests
             result[2].Should().Be("Fizz");
             result[3].Should().Be("4");
         }
+        
+        [Fact]
+        public void Si_Ingreso5_Debe_RetornarLaListaCorrespondiente()
+        {
+            // Arrange & Act
+            var result = FizzBuzzGenerator.Generate(5);
+            
+            // Assert
+            result.Should().HaveCount(5);
+            result[0].Should().Be("1");
+            result[1].Should().Be("2");
+            result[2].Should().Be("Fizz");
+            result[3].Should().Be("4");
+            result[4].Should().Be("Buzz");
+        }
     }
 }
