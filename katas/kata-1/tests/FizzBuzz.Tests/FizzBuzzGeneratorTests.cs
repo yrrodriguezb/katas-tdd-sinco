@@ -6,8 +6,9 @@ namespace FizzBuzz.Tests
     public class FizzBuzzGeneratorTests
     {
         [Fact]
-        public void Si_Ingreso1_Debe_Retornar1()
+        public void Si_Ingreso1_Debe_RetornarLaListaCorrespondiente()
         {
+            
             // Arrange & Act
             var result = FizzBuzzGenerator.Generate(1);
             
