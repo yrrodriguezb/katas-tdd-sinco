@@ -4,12 +4,12 @@ namespace FizzBuzz
     {
         public static List<string> Generate(int count)
         {
-            if (count == 1)
-                return ["1"];
-            else if  (count == 2)
-                return ["1", "2"];
-            else
-                return ["1", "2", "Fizz"];
+            return count switch
+            {
+                1 => ["1"],
+                2 => ["1", "2"],
+                _ => ["1", "2", "Fizz"]
+            };
         }
     }
 }
