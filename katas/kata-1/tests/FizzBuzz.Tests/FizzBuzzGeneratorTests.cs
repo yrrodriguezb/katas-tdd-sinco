@@ -48,7 +48,7 @@ namespace FizzBuzz.Tests
             var result = FizzBuzzGenerator.Generate(4);
             
             // Assert
-            result.Should().HaveCount(3);
+            result.Should().HaveCount(4);
             result[0].Should().Be("1");
             result[1].Should().Be("2");
             result[2].Should().Be("Fizz");
