@@ -6,8 +6,10 @@ namespace FizzBuzz
         {
             if (count == 1)
                 return ["1"];
-
-            return ["1", "2"];
+            else if  (count == 2)
+                return ["1", "2"];
+            else
+                return ["1", "2", "Fizz"];
         }
     }
 }
