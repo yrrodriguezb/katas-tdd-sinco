@@ -8,7 +8,7 @@ namespace FizzBuzz
 
             for (var numero = 1; numero <= count; numero++)
             {
-                if (EsDivisibleTres(numero) && EsDivisiblePorCinco(numero))
+                if (EsDivisiblePorQuince(numero))
                     lista.Add("FizzBuzz");
                 else if (EsDivisibleTres(numero))
                     lista.Add("Fizz");
@@ -21,19 +21,12 @@ namespace FizzBuzz
             return lista;
         }
 
-        private static bool EsDivisiblePorCinco(int numero)
-        {
-            return EsDivisiblePor(numero,5);
-        }
+        private static bool EsDivisiblePorQuince(int numero) => EsDivisiblePor(numero, 15);
 
-        private static bool EsDivisiblePor(int numero, int divisor)
-        {
-            return numero % divisor == 0;
-        }
+        private static bool EsDivisiblePorCinco(int numero) => EsDivisiblePor(numero,5);
 
-        private static bool EsDivisibleTres(int numero)
-        {
-            return EsDivisiblePor(numero, 3);
-        }
+        private static bool EsDivisiblePor(int numero, int divisor) => numero % divisor == 0;
+
+        private static bool EsDivisibleTres(int numero) => EsDivisiblePor(numero, 3);
     }
 }
