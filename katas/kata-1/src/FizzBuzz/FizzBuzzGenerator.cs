@@ -4,10 +4,7 @@ namespace FizzBuzz
     {
         public static List<string> Generate(int count)
         {
-            if (count < 1)
-            {
-                throw new ArgumentException("Debe ingresar un numero mayor a cero");
-            }
+            LanzarExcepcionSiElNumeroEsMenorAUno(count);
             
             var lista =  new List<string>();
 
@@ -24,6 +21,14 @@ namespace FizzBuzz
             }
             
             return lista;
+        }
+
+        private static void LanzarExcepcionSiElNumeroEsMenorAUno(int count)
+        {
+            if (count < 1)
+            {
+                throw new ArgumentException("Debe ingresar un numero mayor a cero");
+            }
         }
 
         private static bool EsDivisiblePorQuince(int numero) => EsDivisiblePor(numero, 15);
