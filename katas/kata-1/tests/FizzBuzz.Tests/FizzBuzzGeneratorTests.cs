@@ -94,5 +94,14 @@ namespace FizzBuzz.Tests
             result[13].Should().Be("14");
             result[14].Should().Be("FizzBuzz");
         }
+        
+        [Fact]
+        public void Si_IngresoUnNumeroMenorA1_Debe_LanzarUnaExcepcion()
+        {
+            // Arrange & Act
+            var action = () => FizzBuzzGenerator.Generate(0);
+            
+            action.Should().Throw<ArgumentException>().WithMessage("Debe ingresar un numero mayor a cero");
+        }
     }
 }
