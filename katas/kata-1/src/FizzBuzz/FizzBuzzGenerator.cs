@@ -4,6 +4,11 @@ namespace FizzBuzz
     {
         public static List<string> Generate(int count)
         {
+            if (count < 1)
+            {
+                throw new ArgumentException("Debe ingresar un numero mayor a cero");
+            }
+            
             var lista =  new List<string>();
 
             for (var numero = 1; numero <= count; numero++)
