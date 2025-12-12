@@ -8,7 +8,9 @@ namespace FizzBuzz
 
             for (var numero = 1; numero <= count; numero++)
             {
-                if (EsDivisibleTres(numero))
+                if (EsDivisibleTres(numero) && EsDivisiblePorCinco(numero))
+                    lista.Add("FizzBuzz");
+                else if (EsDivisibleTres(numero))
                     lista.Add("Fizz");
                 else if (EsDivisiblePorCinco(numero))
                     lista.Add("Buzz");
