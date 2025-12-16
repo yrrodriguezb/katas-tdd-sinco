@@ -4,7 +4,7 @@ namespace FizzBuzz
     {
         public static List<string> Generate(int count)
         {
-            LanzarExcepcionSiElNumeroEsMenorAUno(count);
+            LanzarExcepcionSiElNumeroEsMenorACero(count);
             
             var lista =  new List<string>();
 
@@ -23,9 +23,9 @@ namespace FizzBuzz
             return lista;
         }
 
-        private static void LanzarExcepcionSiElNumeroEsMenorAUno(int count)
+        private static void LanzarExcepcionSiElNumeroEsMenorACero(int count)
         {
-            if (count < 1)
+            if (count < 0)
             {
                 throw new ArgumentException("Debe ingresar un numero mayor o igual a cero");
             }

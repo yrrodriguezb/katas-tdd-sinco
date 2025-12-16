@@ -108,7 +108,7 @@ namespace FizzBuzz.Tests
         public void Si_IngresoElNumeroCero_Debe_RetornarUnaListaVacia()
         {
             // Arrange & Act
-            var result = FizzBuzzGenerator.Generate(15);
+            var result = FizzBuzzGenerator.Generate(0);
             
             result.Should().HaveCount(0);
             result.Should().BeEquivalentTo([]);
