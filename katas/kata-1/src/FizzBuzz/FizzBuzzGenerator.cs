@@ -27,7 +27,7 @@ namespace FizzBuzz
         {
             if (count < 1)
             {
-                throw new ArgumentException("Debe ingresar un numero mayor a cero");
+                throw new ArgumentException("Debe ingresar un numero mayor o igual a cero");
             }
         }
 

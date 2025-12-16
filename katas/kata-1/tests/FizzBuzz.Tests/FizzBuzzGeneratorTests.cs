@@ -96,12 +96,22 @@ namespace FizzBuzz.Tests
         }
         
         [Fact]
-        public void Si_IngresoUnNumeroMenorA1_Debe_LanzarUnaExcepcion()
+        public void Si_IngresoUnNumeroMenorA0_Debe_LanzarUnaExcepcion()
         {
             // Arrange & Act
-            var action = () => FizzBuzzGenerator.Generate(0);
+            var action = () => FizzBuzzGenerator.Generate(-1);
             
-            action.Should().Throw<ArgumentException>().WithMessage("Debe ingresar un numero mayor a cero");
+            action.Should().Throw<ArgumentException>().WithMessage("Debe ingresar un numero mayor o igual a cero");
+        }
+
+        [Fact]
+        public void Si_IngresoElNumeroCero_Debe_RetornarUnaListaVacia()
+        {
+            // Arrange & Act
+            var result = FizzBuzzGenerator.Generate(15);
+            
+            result.Should().HaveCount(0);
+            result.Should().BeEquivalentTo([]);
         }
     }
 }
