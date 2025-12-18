@@ -9,11 +9,7 @@ namespace Calculator
 
         public int Subtract(int a, int b)
         {
-            if (a == 2 && b == 1)
-                return 1;
-            else if (a == 3 && b == 1)
-                return 2;
-            return 0;
+           return a - b;
         }
 
         public int Multiply(int a, int b)
