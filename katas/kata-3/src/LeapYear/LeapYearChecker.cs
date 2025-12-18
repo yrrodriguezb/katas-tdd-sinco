@@ -4,8 +4,9 @@ namespace LeapYear
     {
         public static bool IsLeapYear(int year)
         {
-            if (year == 2004)
+            if (year is 2004 or 2008)
                 return true;
+            
             return false;
         }
     }
