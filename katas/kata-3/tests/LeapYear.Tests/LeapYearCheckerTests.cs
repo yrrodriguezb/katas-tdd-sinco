@@ -16,5 +16,11 @@ namespace LeapYear.Tests
         {
             LeapYearChecker.IsLeapYear(2004).Should().BeTrue();
         }
+        
+        [Fact]
+        public void Si_IngresoElAnio2008_Debe_RetornarVerdadero()
+        {
+            LeapYearChecker.IsLeapYear(2008).Should().BeTrue();
+        }
     }
 }
