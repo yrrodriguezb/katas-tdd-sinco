@@ -7,38 +7,20 @@ namespace Calculator.Tests
     {
         private readonly Calculator _calculator = new();
 
-        [Fact]
-        public void Add_TwoPositiveNumbers_ReturnsSum()
+        [Fact] 
+        public void Si_Sumo1y1_Debe_Retornar2()
         {
             // Arrange
-            int a = 5;
-            int b = 3;
+            int a = 1;
+            int b = 1;
 
             // Act
             int result = _calculator.Add(a, b);
 
             // Assert
-            result.Should().Be(8);
+            result.Should().Be(2);
         }
 
-        [Fact]
-        public void Subtract_TwoNumbers_ReturnsDifference()
-        {
-            // Arrange
-            int a = 10;
-            int b = 4;
-
-            // Act
-            int result = _calculator.Subtract(a, b);
-
-            // Assert
-            result.Should().Be(6);
-        }
-
-        // TODO: Implementa más tests usando TDD
-        // Suggestions:
-        // - Test multiply with positive numbers
-        // - Test divide with positive numbers  
-        // - Test edge cases (division by zero, negative numbers, etc.)
+       
     }
 }
