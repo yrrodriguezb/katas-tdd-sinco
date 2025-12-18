@@ -134,7 +134,7 @@ namespace Calculator.Tests
         }
         
         [Fact] 
-        public void Si_Divido2entre1_Debe_Retornar2()
+        public void Si_Divido2Entre1_Debe_Retornar2()
         {
             // Arrange
             int a = 2;
@@ -145,6 +145,20 @@ namespace Calculator.Tests
 
             // Assert
             result.Should().Be(2);
+        }
+        
+        [Fact] 
+        public void Si_Divido2Entre2_Debe_Retornar1()
+        {
+            // Arrange
+            int a = 2;
+            int b = 2;
+
+            // Act
+            int result = _calculator.Divide(a, b);
+
+            // Assert
+            result.Should().Be(1);
         }
     }
 }
