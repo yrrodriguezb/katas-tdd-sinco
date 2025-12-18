@@ -19,11 +19,7 @@ namespace Calculator
 
         public int Divide(int a, int b)
         {
-            if (a == 2 && b == 2)
-                return 1;
-            else if (a == 0 && b == 2)
-                return 0;
-            return 2;
+            return a / b;
         }
     }
 }
