@@ -118,5 +118,19 @@ namespace Calculator.Tests
             // Assert
             result.Should().Be(2);
         }
+        
+        [Fact] 
+        public void Si_Multiplico1por3_Debe_Retornar3()
+        {
+            // Arrange
+            int a = 1;
+            int b = 3;
+
+            // Act
+            int result = _calculator.Multiply(a, b);
+
+            // Assert
+            result.Should().Be(3);
+        }
     }
 }
