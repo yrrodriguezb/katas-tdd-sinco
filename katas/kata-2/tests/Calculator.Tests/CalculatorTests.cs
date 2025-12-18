@@ -62,5 +62,19 @@ namespace Calculator.Tests
             // Assert
             result.Should().Be(0);
         }
+        
+        [Fact] 
+        public void Si_Resto1de2_Debe_Retornar1()
+        {
+            // Arrange
+            int a = 2;
+            int b = 1;
+
+            // Act
+            int result = _calculator.Subtract(a, b);
+
+            // Assert
+            result.Should().Be(1);
+        }
     }
 }
