@@ -160,5 +160,19 @@ namespace Calculator.Tests
             // Assert
             result.Should().Be(1);
         }
+        
+        [Fact] 
+        public void Si_Divido0Entre2_Debe_Retornar0()
+        {
+            // Arrange
+            int a = 0;
+            int b = 2;
+
+            // Act
+            int result = _calculator.Divide(a, b);
+
+            // Assert
+            result.Should().Be(0);
+        }
     }
 }
