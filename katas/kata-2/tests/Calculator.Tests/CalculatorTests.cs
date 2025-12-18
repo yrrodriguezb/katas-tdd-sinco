@@ -174,5 +174,19 @@ namespace Calculator.Tests
             // Assert
             result.Should().Be(0);
         }
+        
+        [Fact] 
+        public void Si_Divido2Entre0_Debe_RetornarUnaExcepcion()
+        {
+            // Arrange
+            int a = 2;
+            int b = 0;
+
+            // Act
+            var action = () => _calculator.Divide(a, b);
+
+            // Assert
+            action.Should().Throw<DivideByZeroException>().WithMessage("No es posible dividir por cero");
+        }
     }
 }
