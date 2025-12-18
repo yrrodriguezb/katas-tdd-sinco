@@ -2,27 +2,23 @@ namespace Calculator
 {
     public class Calculator
     {
-        public int Add(int a, int b)
+        public int Add(int sumando1, int sumando2) => sumando1 + sumando2;
+
+        public int Subtract(int minuendo, int sustraendo) => minuendo - sustraendo;
+
+        public int Multiply(int multiplicando, int multiplicador) => multiplicando * multiplicador;
+
+        public int Divide(int dividendo, int divisor)
         {
-           return a + b;
+            LanzarExcepcionSiElDivisorEsCero(divisor);
+
+            return dividendo / divisor;
         }
 
-        public int Subtract(int a, int b)
+        private static void LanzarExcepcionSiElDivisorEsCero(int divisor)
         {
-           return a - b;
-        }
-
-        public int Multiply(int a, int b)
-        {
-            return a * b;
-        }
-
-        public int Divide(int a, int b)
-        {
-            if (b == 0)
+            if (divisor == 0)
                 throw  new DivideByZeroException("No es posible dividir por cero");
-            
-            return a / b;
         }
     }
 }
