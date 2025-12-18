@@ -14,11 +14,7 @@ namespace Calculator
 
         public int Multiply(int a, int b)
         {
-            if (a == 1 && b == 2)
-                return 2;
-            if (a == 1 && b == 3)
-                return 3;
-            return 1;
+            return a * b;
         }
 
         public int Divide(int a, int b)
