@@ -34,5 +34,19 @@ namespace Calculator.Tests
             // Assert
             result.Should().Be(3);
         }
+        
+        [Fact] 
+        public void Si_Sumo1y3_Debe_Retornar4()
+        {
+            // Arrange
+            int a = 1;
+            int b = 3;
+
+            // Act
+            int result = _calculator.Add(a, b);
+
+            // Assert
+            result.Should().Be(4);
+        }
     }
 }
