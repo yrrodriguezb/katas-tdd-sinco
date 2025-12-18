@@ -21,6 +21,8 @@ namespace Calculator
         {
             if (a == 2 && b == 2)
                 return 1;
+            else if (a == 0 && b == 2)
+                return 0;
             return 2;
         }
     }
