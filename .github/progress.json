@@ -1,9 +1,10 @@
 {
-  "current_kata": 3,
+  "current_kata": 4,
   "completed_katas": [
     1,
-    2
+    2,
+    3
   ],
   "total_katas": 5,
-  "last_updated": "2025-12-18T22:17:14Z"
+  "last_updated": "2025-12-19T00:24:06Z"
 }
