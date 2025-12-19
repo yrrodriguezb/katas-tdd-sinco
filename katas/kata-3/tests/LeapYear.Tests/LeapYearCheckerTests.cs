@@ -40,5 +40,11 @@ namespace LeapYear.Tests
         {
             LeapYearChecker.IsLeapYear(2400).Should().BeTrue();
         }
+        
+        [Fact]
+        public void Si_IngresoElAnio2800_Debe_RetornarTrue()
+        {
+            LeapYearChecker.IsLeapYear(2800).Should().BeTrue();
+        }
     }
 }
