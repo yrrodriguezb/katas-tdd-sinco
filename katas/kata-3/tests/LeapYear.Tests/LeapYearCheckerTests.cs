@@ -28,5 +28,11 @@ namespace LeapYear.Tests
         {
             LeapYearChecker.IsLeapYear(1900).Should().BeFalse();
         }
+        
+        [Fact]
+        public void Si_IngresoElAnio2000_Debe_RetornarTrue()
+        {
+            LeapYearChecker.IsLeapYear(2000).Should().BeTrue();
+        }
     }
 }
