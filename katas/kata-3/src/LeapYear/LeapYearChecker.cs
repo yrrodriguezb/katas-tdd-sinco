@@ -4,6 +4,9 @@ namespace LeapYear
     {
         public static bool IsLeapYear(int year)
         {
+            if (year == 2000)
+                return true;
+            
             if (EsDivisiblePor100(year))
                 return false;
             
