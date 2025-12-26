@@ -14,10 +14,18 @@ namespace StringCalculator
 
         private static int SumarNumeros(DelimitadorNumeros delimitadorNumeros)
         {
-            return delimitadorNumeros.Numeros
+            var numeros =  delimitadorNumeros.Numeros
                 .Split(delimitadorNumeros.Delimitador)
-                .Select(int.Parse)
-                .Sum();
+                .Select(int.Parse);
+
+            var negativos = numeros.Where(x => x < 0);
+            
+            if (negativos.Any())
+            {
+                throw new Exception($"Negatives not allowed: {string.Join(", ", negativos)}");
+            }
+            
+            return numeros.Sum();
         }
 
 
