@@ -44,5 +44,13 @@ namespace StringCalculator.Tests
             
             result.Should().Be(6);
         }
+        
+        [Fact]
+        public void Si_IngresoDosNumerosSeparadoPorDelimitadoresPersonalizados_Debe_Sumarlos()
+        {
+            var result = Calculator.Calculate("//;\n1;2");
+            
+            result.Should().Be(3);
+        }
     }
 }
