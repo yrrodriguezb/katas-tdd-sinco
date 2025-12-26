@@ -4,11 +4,11 @@ namespace StringCalculator
     {
         public static int Calculate(string input)
         {
-            if (input == "1")
-                return 1;
-            else if (input == "1,2")
-                return 3;
-            return 0;
+            if (string.IsNullOrEmpty(input))
+                return 0;
+
+            var numbers = input.Split(',');
+            return numbers.Sum(n => int.Parse(n));
         }
     }
 }
