@@ -61,5 +61,13 @@ namespace StringCalculator.Tests
             act.Should().Throw<Exception>()
                 .WithMessage("Negatives not allowed: -2");
         }
+
+        [Fact]
+        public void Si_SeIngresanNumerosMayoresA1000_Debe_Ignorarlos()
+        {
+            var result = Calculator.Calculate("1,1001");
+            
+            result.Should().Be(1);
+        }
     }
 }
