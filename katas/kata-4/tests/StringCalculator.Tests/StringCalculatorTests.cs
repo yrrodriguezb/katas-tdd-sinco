@@ -12,5 +12,13 @@ namespace StringCalculator.Tests
             
             result.Should().Be(0);
         }
+        
+        [Fact]
+        public void Si_Ingreso1_Debe_Retornar1()
+        {
+            var result = Calculator.Calculate("1");
+            
+            result.Should().Be(1);
+        }
     }
 }
