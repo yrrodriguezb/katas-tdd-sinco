@@ -52,5 +52,14 @@ namespace StringCalculator.Tests
             
             result.Should().Be(3);
         }
+        
+        [Fact]
+        public void Si_SeIngresanNumerosNegativos_Debe_LanzarExcepcion()
+        {
+            Action act = () => Calculator.Calculate("1,-2,3");
+
+            act.Should().Throw<Exception>()
+                .WithMessage("Negatives not allowed: -2");
+        }
     }
 }
