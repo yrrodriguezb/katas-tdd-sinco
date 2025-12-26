@@ -20,5 +20,13 @@ namespace StringCalculator.Tests
             
             result.Should().Be(1);
         }
+        
+        [Fact]
+        public void Si_Ingreso1y2SeparadosPorComa_Debe_Retornar3()
+        {
+            var result = Calculator.Calculate("1,2");
+            
+            result.Should().Be(3);
+        }
     }
 }
