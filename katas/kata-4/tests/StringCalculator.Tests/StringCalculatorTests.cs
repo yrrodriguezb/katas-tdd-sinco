@@ -28,5 +28,13 @@ namespace StringCalculator.Tests
             
             result.Should().Be(3);
         }
+        
+        [Fact]
+        public void Si_IngresoTresNumerosSeparadosPorComa_Debe_Sumarlos()
+        {
+            var result = Calculator.Calculate("1,2,3");
+    
+            result.Should().Be(6);
+        }
     }
 }
