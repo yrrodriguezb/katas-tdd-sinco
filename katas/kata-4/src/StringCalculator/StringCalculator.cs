@@ -7,20 +7,37 @@ namespace StringCalculator
             if (string.IsNullOrEmpty(input))
                 return 0;
 
+            var delimitadorNumeros = ResolverDelimitadorYNumeros(input);
+
+            return SumarNumeros(delimitadorNumeros);
+        }
+
+        private static int SumarNumeros(DelimitadorNumeros delimitadorNumeros)
+        {
+            return delimitadorNumeros.Numeros
+                .Split(delimitadorNumeros.Delimitador)
+                .Select(int.Parse)
+                .Sum();
+        }
+
+
+        private static DelimitadorNumeros ResolverDelimitadorYNumeros(string input)
+        {
             var delimitador = ",";
-            var entrada = input;
+            var numerosTexto = input;
 
             if (input.StartsWith("//"))
             {
-                var subCadena = input.Split('\n');
-                delimitador = subCadena[0].Substring(2);
-                entrada = subCadena[1];
+                var partes = input.Split('\n');
+                delimitador = partes[0].Substring(2);
+                numerosTexto = partes[1];
             }
 
-            entrada = entrada.Replace("\n", ",");
+            numerosTexto = numerosTexto.Replace("\n", delimitador);
 
-            var numbers = entrada.Split(delimitador);
-            return numbers.Sum(n => int.Parse(n));
+            return new DelimitadorNumeros(delimitador, numerosTexto);
         }
     }
+
+    public record DelimitadorNumeros(string Delimitador, string Numeros);
 }
