@@ -23,7 +23,7 @@ namespace StringCalculator
 
         private static void ValidarNumeros(IEnumerable<int> numeros)
         {
-            var negativos = numeros.Where(x => x < 0);
+            var negativos = numeros.Where(numero => numero < 0);
 
             if (negativos.Any())
             {
@@ -36,7 +36,7 @@ namespace StringCalculator
             return delimitadorNumeros.Numeros
                 .Split(delimitadorNumeros.Delimitador)
                 .Select(int.Parse)
-                .Where(x => x < 1000);
+                .Where(numero => numero < 1000);
         }
 
 
