@@ -36,5 +36,13 @@ namespace StringCalculator.Tests
     
             result.Should().Be(6);
         }
+        
+        [Fact]
+        public void Si_IngresoTresNumerosSeparadoPorSaltoDeLineaYComa_Debe_Sumarlos()
+        {
+            var result = Calculator.Calculate("1\n2,3");
+            
+            result.Should().Be(6);
+        }
     }
 }
