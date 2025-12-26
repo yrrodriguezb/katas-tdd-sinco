@@ -35,7 +35,8 @@ namespace StringCalculator
         {
             return delimitadorNumeros.Numeros
                 .Split(delimitadorNumeros.Delimitador)
-                .Select(int.Parse);
+                .Select(int.Parse)
+                .Where(x => x < 1000);
         }
 
 
