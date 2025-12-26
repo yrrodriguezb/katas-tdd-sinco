@@ -4,18 +4,23 @@ namespace StringCalculator
     {
         public static int Calculate(string input)
         {
-            var str = NormalizarEntrada(input);
-            if (string.IsNullOrEmpty(str))
+            if (string.IsNullOrEmpty(input))
                 return 0;
 
-            var numbers = str.Split(',');
-            
-            return numbers.Sum(n => int.Parse(n));
-        }
+            var delimitador = ",";
+            var entrada = input;
 
-        private static string NormalizarEntrada(string input)
-        {
-            return input.Replace("\n", ",");
+            if (input.StartsWith("//"))
+            {
+                var subCadena = input.Split('\n');
+                delimitador = subCadena[0].Substring(2);
+                entrada = subCadena[1];
+            }
+
+            entrada = entrada.Replace("\n", ",");
+
+            var numbers = entrada.Split(delimitador);
+            return numbers.Sum(n => int.Parse(n));
         }
     }
 }
